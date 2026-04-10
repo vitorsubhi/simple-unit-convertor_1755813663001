@@ -43,4 +43,10 @@ describe('Length conversions', () => {
     expect(result.value).toBeCloseTo(1.60934);
     expect(result.unit).toBe('km');
   });
+
+  it('should convert yards to meters', () => {
+    const result = convert(5, 'yards').to('meters');
+    expect(result.value).toBeCloseTo(4.572);
+    expect(result.unit).toBe('meters');
+  });
 });
